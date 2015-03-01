@@ -1,0 +1,7 @@
+name             'cookbook-graphicsmagick'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures cookbook-graphicsmagick'
+long_description 'Installs/Configures cookbook-graphicsmagick'
+version          '0.1.0'
