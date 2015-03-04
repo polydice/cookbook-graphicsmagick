@@ -12,4 +12,7 @@ platforms:
 suites:
   - name: default
     run_list:
+  - name: package
+    run_list: 
+      - recipe[cookbook-graphicsmagick::package]
     attributes:
