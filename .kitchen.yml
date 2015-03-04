@@ -16,3 +16,7 @@ suites:
     run_list: 
       - recipe[cookbook-graphicsmagick::package]
     attributes:
+  - name: depackage
+    run_list:
+      - recipe[cookbook-graphicsmagick::depackage]
+    attributes:
