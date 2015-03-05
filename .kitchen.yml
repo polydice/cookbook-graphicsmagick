@@ -11,6 +11,9 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[cookbook-graphicsmagick::depackage]
+      - recipe[cookbook-graphicsmagick::source]
+    attributes:
   - name: package
     run_list: 
       - recipe[cookbook-graphicsmagick::package]
