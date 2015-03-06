@@ -1,16 +1,8 @@
-include_recipe "apt::default"
+include_recipe "apt"
 
-package "build-essential"
-package "libwebp-dev"
-package "libpng-dev"
-package "libjpeg-dev"
-package "libbz2-dev"
-package "libfreetype6-dev"
-package "libtiff-dev"
-package "libxml2-dev"
-package "libjasper-dev"
-package "libwmf-dev"
-package "liblcms-dev"
+%w(build-essential libwebp-dev libpng-dev libjpeg-dev libbz2-dev libfreetype6-dev libtiff-dev libxml2-dev libjasper-dev libwmf-dev liblcms-dev).each do |pkg|
+  package pkg
+end
 
 bash "install graphicsmagick with binary file" do
   user 'root'

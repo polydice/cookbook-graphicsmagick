@@ -1,3 +1,5 @@
-include_recipe "apt::default"
+include_recipe "apt"
 
-package "graphicsmagick"
+package "graphicsmagick" do
+  action :install
+end
