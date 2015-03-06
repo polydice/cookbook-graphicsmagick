@@ -1,4 +1,4 @@
-name             'cookbook-graphicsmagick'
+name             'graphicsmagick'
 maintainer       'Chun-Fung Lee'
 maintainer_email 'fung@polydice.com'
 license          'Apache 2.0'
