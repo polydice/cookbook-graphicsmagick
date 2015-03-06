@@ -1,42 +1,21 @@
-# cookbook-graphicsmagick-cookbook
+# cookbook-graphicsmagick
 
-TODO: Enter the cookbook description here.
+Chef cookbook for [GraphicsMagick](www.graphicsmagick.org).
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+This cookbook is developed and tested on Ubuntu 14.04, but should also work on 12.04. 
 
-## Attributes
+Please feel free to send pull request or create issue for additional platform support.
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['cookbook-graphicsmagick']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+## Recipes
 
-## Usage
-
-### cookbook-graphicsmagick::default
-
-Include `cookbook-graphicsmagick` in your node's `run_list`:
-
-```json
-{
-  "run_list": [
-    "recipe[cookbook-graphicsmagick::default]"
-  ]
-}
-```
+* `graphicsmagick::package` - Install graphicsmagick from package
+* `graphicsmagick::source` - Install graphicsmagick from source code
+* `graphicsmagick::depacakge` - Uninstall packaged graphicmagick
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author: Chun-Fung Lee (fung@polydice.com)
+
+License: Apache
