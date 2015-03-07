@@ -26,3 +26,5 @@ suites:
     run_list:
       - recipe[graphicsmagick::source]
     attributes:
+      graphicsmagick:
+        version: 1.3.20

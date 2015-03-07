@@ -4,18 +4,19 @@ include_recipe "apt"
   package pkg
 end
 
-bash "install graphicsmagick with binary file" do
-  user 'root'
-  cwd '/tmp'
-  code <<-EOH
-    wget http://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.21/GraphicsMagick-1.3.21.tar.gz
-    tar -zxvf GraphicsMagick-1.3.21.tar.gz
-    cd GraphicsMagick-1.3.21
-    ./configure
-    make
-    make install
-  EOH
+version = node[:graphicsmagick][:version]
+
+remote_file "#{Chef::Config[:file_cache_path]}/GraphicsMagick-#{version}.tar.gz" do
+  source node[:graphicsmagick][:url]
+  mode "0644"
 end
 
-
+bash "build graphicsmagick" do
+  cwd Chef::Config[:file_cache_path]
+  code <<-EOH
+    tar -zxf GraphicsMagick-#{version}.tar.gz
+    (cd GraphicsMagick-#{version} && ./configure)
+    (cd GraphicsMagick-#{version} && make && make install)
+  EOH
+end
 
