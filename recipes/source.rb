@@ -15,7 +15,7 @@ bash "build graphicsmagick" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
     tar -zxf GraphicsMagick-#{version}.tar.gz
-    (cd GraphicsMagick-#{version} && ./configure)
+    (cd GraphicsMagick-#{version} && ./configure '--enable-shared' '--enable-static' '--enable-libtool-verbose' '--prefix=/usr')
     (cd GraphicsMagick-#{version} && make && make install)
   EOH
 end
